@@ -14,11 +14,17 @@ li {
   list-style: none;
 }
 
-/* Ketik code Anda dibawah */
 li {
   float: left;
   padding: 35px 20px;
   display: block;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .header-top {
@@ -26,34 +32,38 @@ li {
   float: left;
   padding: 20px 40px;
 }
-.header {
+
+header {
     background-color: #26d0c9;
     color: white;
     height: 90px;
 }
+
 .top {
-  padding: 520px 0 100px 0;
+  padding: 520px 100px 100px 0;
   background-image: url(https://scontent-cgk1-2.xx.fbcdn.net/v/t39.30808-6/234833435_4477166152306100_989625319469594231_n.jpg?_nc_cat=111&ccb=1-4&_nc_sid=730e14&_nc_ohc=1UHj5qaGJAAAX_q7tW9&_nc_ht=scontent-cgk1-2.xx&oh=de2a0aea2c001b8a215747e9233724cb&oe=61129EDC);
   background-size: cover;
-  color: white;
-  text-align: center;
+  float: center;
 }
 
 .aboutme{
   text-align: center;
 }
 
+.aboutme h2{
+  padding-bottom: 20px;
+}
 .aboutme h4{
-  padding-top: 30px;
   padding-bottom: 50px;
 }
 
 .background{
   display: flex;
+  padding-bottom: 20px;
 }
 
-.container {
-  margin: auto;
+.container1 {
+  display: flex;
   padding: 10px;
 }
 
@@ -114,7 +124,7 @@ li {
 }
 
 .screen-body-item {
-  flex: 1;
+  flex: auto;
   padding: 50px;
 }
 
@@ -140,6 +150,11 @@ li {
   width: 25px;
   height: 4px;
   background: #ea1d6f;
+}
+
+.app-contact a{
+  text-decoration: none;
+  color: white;
 }
 
 .app-contact {
@@ -195,13 +210,67 @@ li {
   color: #b9134f;
 }
 
-.footer {
+footer {
   padding: 10px;
   background-color: #26d0c9;
   text-align: center;
 }
 
-.footer a:link{
+footer a{
   text-decoration: none;
   color: white;
+}
+
+@media (max-width: 1000px) {
+  .background {
+    flex-wrap: wrap;
+    text-align: left;
+  }
+  .container1 {
+    width: 50%;
+  }
+   .top{
+    background-size: cover;
+    padding: 480px 0 100px 0;
+    text-align: left;
+  }
+  .header-list {
+    flex-direction: column;
+  }  
+  .header-list li{
+    font-size: 18px;
+    margin: 0 auto;
+  }
+   .aboutme h2{
+    font-size: 18px;
+  }
+  .aboutme h4{
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 670px) {
+  .background {
+    flex-wrap: wrap;
+    text-align: left;
+  }
+  .top{
+    background-size: cover;
+    padding: 120px 0 100px 0;
+    text-align: left;
+  }
+  .header-list {
+    flex-direction: column;
+  }
+  .header-list li{
+    padding: 35px 10px;
+    font-size: 12px;
+    margin: 0 auto;
+  }
+  .aboutme h2{
+    font-size: 12px;
+  }
+  .aboutme h4{
+    font-size: 6px;
+  }
 }
